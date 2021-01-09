@@ -49,13 +49,20 @@ def mail():
     server.starttls()
     server.ehlo()
 
-    server.login("everbestchirag3@gmail.com", "aqfyiqejhxuuhtfj")
+
+    '''
+    Enable 2 step verification for your mail id 
+    and enter your mail below in place of 'your_mail'
+    and the two step verified password in place of 'your_pass'
+    '''
+
+    server.login("your_mail", "your_pass")
     email_subject = "Price has fallen down!"
     email_body = f"Check New Prices here  {URL}"
 
     message = f"Subject: {email_subject}\n\n{email_body}"
 
-    server.sendmail("everbestchirag3@gmail.com", "nopopeb854@girtipo.com", message)
+    server.sendmail("your_mail", "user_mail", message)
 
     print("\nMail Has been sent!")
 
